@@ -33,5 +33,8 @@ let g:rspec_command = "echom system('echo \"" . rspec_command . rspec_options . 
 :cw
 ```
 
+## Demonstration
+![](https://raw.githubusercontent.com/dapplebeforedawn/ides-considered-harmful-talk/master/the-wrench.gif)
+
 `vim_formatter.rb` outputs the spec results in to a format that can be read by VIM's quickfix buffer.
 
