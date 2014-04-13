@@ -17,12 +17,21 @@ while true; do sh -c "`cat run_anything`"; done
 Bundle 'thoughtbot/vim-rspec'
 
 " vim-rspec mappings
-nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :call RunNearestSpec()<CR>
-nnoremap <Leader>l :call RunLastSpec()<CR>
-nnoremap <Leader>a :call RunAllSpecs()<CR>
+nnoremap <Leader>specf :call RunCurrentSpecFile()<CR>
+nnoremap <Leader>specn :call RunNearestSpec()<CR>
+nnoremap <Leader>spec :call RunLastSpec()<CR>
+nnoremap <Leader>speca :call RunAllSpecs()<CR>
 
 let rspec_command = "clear \; spring rspec {spec}"
-let rspec_options = " --require=support/vim_formatter.rb --format VimFormatter --out quickfix.out --format progress"
+let rspec_options = " --require=support/formatters/vim_formatter.rb --format VimFormatter --out quickfix.out --format progress"
 let g:rspec_command = "echom system('echo \"" . rspec_command . rspec_options . "\" >> run_specs')"
 ```
+
+## Got Any More?
+```vim
+:cg quickfix.out
+:cw
+```
+
+`vim_formatter.rb` outputs the spec results in to a format that can be read by VIM's quickfix buffer.
+
