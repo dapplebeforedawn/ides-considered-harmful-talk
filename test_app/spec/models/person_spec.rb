@@ -10,7 +10,7 @@ describe Person do
       expect(subject.take_a_walk :home).to eq("you walk home")
     end
 
-    it "walks you home" do
+    it "walks in a dark alley" do
       expect(subject.take_a_walk :dark_alley).to eq("you are eaten by a grue")
     end
 
