@@ -80,7 +80,7 @@
   ```
   :%s/\snor/ nwy/c
   ```
-1. Capitolize the abbreviations in `territories`
+1. Capitalize the abbreviations in `territories`
 
   ```
   ggVG
