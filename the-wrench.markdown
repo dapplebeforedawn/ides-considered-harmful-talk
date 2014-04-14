@@ -1,4 +1,4 @@
-# The Wrench
+# The (Pipe) Wrench
 
 > Using the concurrency primitives that your shell gives you.
 
